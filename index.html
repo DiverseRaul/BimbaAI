@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bimba AI - Code Generation Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dark-mode">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Bimba AI</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#main" class="active">Home</a></li>
+                    <li><a href="#code-generator">Code Generator</a></li>
+                </ul>
+            </nav>
+            <div class="settings">
+                <div class="settings-icon" id="open-settings">
+                    <i class="fas fa-cog"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Settings Modal -->
+    <div class="settings-modal" id="settings-modal">
+        <div class="settings-content">
+            <div class="settings-header">
+                <h2>Settings</h2>
+                <button class="close-settings" id="close-settings">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="settings-item">
+                <span>Theme</span>
+                <button id="theme-toggle">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+            <div class="settings-item">
+                <span>Font Size</span>
+                <div class="font-size-controls">
+                    <button id="decrease-font"><i class="fas fa-minus"></i></button>
+                    <span id="current-font-size">16px</span>
+                    <button id="increase-font"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+            <div class="settings-item">
+                <span>Language</span>
+                <select id="language-select" class="settings-select">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="pt">Português</option>
+                </select>
+            </div>
+            <div class="settings-item">
+                <span>Animations</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="animations-toggle" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+            <div class="settings-item">
+                <span>Notifications</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="notifications-toggle" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+            <div class="settings-footer">
+                <button id="reset-settings" class="reset-button">
+                    <i class="fas fa-undo-alt"></i> Reset to Default
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-container">
+        <!-- Main Section (Combined Home, Features, About) -->
+        <section id="main" class="page-section active">
+            <!-- Hero Section -->
+            <div class="hero">
+                <div class="container">
+                    <h2>Welcome to Bimba AI</h2>
+                    <p>Your intelligent code generation platform</p>
+                    <button class="cta-button" id="go-to-generator">Try Code Generator</button>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="container section-container">
+                <h2>Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-code"></i>
+                        <h3>AI Code Generation</h3>
+                        <p>Advanced algorithms to generate code based on your descriptions</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-highlighter"></i>
+                        <h3>Syntax Highlighting</h3>
+                        <p>Clear visualization of your generated code</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-language"></i>
+                        <h3>Multiple Languages</h3>
+                        <p>Support for various programming languages</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-copy"></i>
+                        <h3>Easy Copy & Paste</h3>
+                        <p>Quickly use your generated code in any project</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div class="container section-container">
+                <h2>About Bimba AI</h2>
+                <p>Bimba AI is a cutting-edge code generation platform that combines artificial intelligence with your programming needs. Our platform offers intelligent code generation for multiple programming languages with an intuitive interface.</p>
+                
+                <div class="about-grid">
+                    <div class="about-card">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Fast</h3>
+                        <p>Generate code in seconds, not hours</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-brain"></i>
+                        <h3>Intelligent</h3>
+                        <p>AI that understands your requirements</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-user-shield"></i>
+                        <h3>Secure</h3>
+                        <p>Your prompts and code stay private</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Code Generator Section -->
+        <section id="code-generator" class="page-section">
+            <div class="container">
+                <h2>AI Code Generator</h2>
+                <div class="code-generator-container">
+                    <div class="code-input-container">
+                        <h3>What do you want to create?</h3>
+                        <textarea id="code-prompt" placeholder="Describe the code you want to generate in any programming language..."></textarea>
+                        <div class="code-options">
+                            <button id="generate-code-btn">Generate Code</button>
+                        </div>
+                    </div>
+                    <div class="code-output-container">
+                        <div class="code-header">
+                            <span>Generated Code</span>
+                            <button id="copy-code-btn" class="icon-button">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <pre><code id="code-output">// Your code will appear here</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Bimba AI. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
