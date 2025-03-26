@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bimba AI - Code Generation Platform</title>
+    <title>Bimba AI Studio - Intelligent AI Platform</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="dark-mode">
     <header>
         <div class="container">
             <div class="logo">
-                <h1>Bimba AI</h1>
+                <h1>Bimba AI Studio</h1>
             </div>
             <nav>
                 <ul>
                     <li><a href="#main" class="active">Home</a></li>
-                    <li><a href="#code-generator">Code Generator</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#ai-studio">AI Studio</a></li>
                 </ul>
             </nav>
             <div class="settings">
@@ -82,89 +86,156 @@
     </div>
 
     <div class="page-container">
-        <!-- Main Section (Combined Home, Features, About) -->
+        <!-- Main Section (Home) -->
         <section id="main" class="page-section active">
             <!-- Hero Section -->
             <div class="hero">
                 <div class="container">
-                    <h2>Welcome to Bimba AI</h2>
-                    <p>Your intelligent code generation platform</p>
-                    <button class="cta-button" id="go-to-generator">Try Code Generator</button>
-                </div>
-            </div>
-
-            <!-- Features Section -->
-            <div class="container section-container">
-                <h2>Features</h2>
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <i class="fas fa-code"></i>
-                        <h3>AI Code Generation</h3>
-                        <p>Advanced algorithms to generate code based on your descriptions</p>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-highlighter"></i>
-                        <h3>Syntax Highlighting</h3>
-                        <p>Clear visualization of your generated code</p>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-language"></i>
-                        <h3>Multiple Languages</h3>
-                        <p>Support for various programming languages</p>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-copy"></i>
-                        <h3>Easy Copy & Paste</h3>
-                        <p>Quickly use your generated code in any project</p>
+                    <h2>Welcome to Bimba AI Studio</h2>
+                    <p>Your intelligent AI platform powered by Gemini</p>
+                    <div class="cta-buttons">
+                        <button class="cta-button primary" id="go-to-studio">Try AI Studio</button>
+                        <button class="cta-button secondary" id="learn-more">Learn More</button>
                     </div>
                 </div>
             </div>
 
             <!-- About Section -->
             <div class="container section-container">
-                <h2>About Bimba AI</h2>
-                <p>Bimba AI is a cutting-edge code generation platform that combines artificial intelligence with your programming needs. Our platform offers intelligent code generation for multiple programming languages with an intuitive interface.</p>
+                <h2>About Bimba AI Studio</h2>
+                <p>Bimba AI Studio is a comprehensive AI platform powered by Google's Gemini technology. Our platform offers intelligent solutions for developers, content creators, and businesses with an intuitive interface and powerful capabilities.</p>
                 
                 <div class="about-grid">
                     <div class="about-card">
                         <i class="fas fa-bolt"></i>
                         <h3>Fast</h3>
-                        <p>Generate code in seconds, not hours</p>
+                        <p>Get results in seconds, not hours</p>
                     </div>
                     <div class="about-card">
                         <i class="fas fa-brain"></i>
                         <h3>Intelligent</h3>
-                        <p>AI that understands your requirements</p>
+                        <p>Powered by Google's Gemini AI</p>
                     </div>
                     <div class="about-card">
                         <i class="fas fa-user-shield"></i>
                         <h3>Secure</h3>
-                        <p>Your prompts and code stay private</p>
+                        <p>Your data stays private and protected</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Code Generator Section -->
-        <section id="code-generator" class="page-section">
+        <!-- Features Section -->
+        <section id="features" class="page-section">
             <div class="container">
-                <h2>AI Code Generator</h2>
-                <div class="code-generator-container">
-                    <div class="code-input-container">
-                        <h3>What do you want to create?</h3>
-                        <textarea id="code-prompt" placeholder="Describe the code you want to generate in any programming language..."></textarea>
-                        <div class="code-options">
-                            <button id="generate-code-btn">Generate Code</button>
-                        </div>
-                    </div>
-                    <div class="code-output-container">
-                        <div class="code-header">
-                            <span>Generated Code</span>
-                            <button id="copy-code-btn" class="icon-button">
-                                <i class="fas fa-copy"></i>
+                <h2>Features</h2>
+                <p>Coming soon! Check back later for exciting new features.</p>
+            </div>
+        </section>
+
+        <!-- AI Studio Section -->
+        <section id="ai-studio" class="page-section ai-studio">
+            <div class="container">
+                <div class="studio-container">
+                    <div class="studio-sidebar">
+                        <h3>Studio Modes</h3>
+                        <div class="studio-modes">
+                            <button class="studio-mode-btn active" data-mode="code">
+                                <i class="fas fa-code"></i>
+                                Code Generation
+                            </button>
+                            <button class="studio-mode-btn" data-mode="content">
+                                <i class="fas fa-file-alt"></i>
+                                Content Creation
+                            </button>
+                            <button class="studio-mode-btn" data-mode="image">
+                                <i class="fas fa-image"></i>
+                                Image Analysis
+                            </button>
+                            <button class="studio-mode-btn" data-mode="assistant">
+                                <i class="fas fa-robot"></i>
+                                AI Assistant
                             </button>
                         </div>
-                        <pre><code id="code-output">// Your code will appear here</code></pre>
+                        
+                        <h3>Settings</h3>
+                        <div class="studio-settings">
+                            <div class="studio-setting">
+                                <label for="api-key">Gemini API Key</label>
+                                <input type="password" id="api-key" class="studio-input" placeholder="Enter your Gemini API key">
+                            </div>
+                            <div class="studio-setting">
+                                <label for="mode-select">Mode</label>
+                                <select id="mode-select" class="studio-select">
+                                    <option value="code">Code Generation</option>
+                                    <option value="content">Content Creation</option>
+                                    <option value="image">Image Analysis</option>
+                                    <option value="assistant">AI Assistant</option>
+                                </select>
+                            </div>
+                            <div class="studio-setting">
+                                <label for="model-select">Model</label>
+                                <select id="model-select" class="studio-select">
+                                    <option value="gemini-pro">Gemini Pro</option>
+                                    <option value="gemini-pro-vision">Gemini Pro Vision</option>
+                                </select>
+                            </div>
+                            <div class="studio-setting">
+                                <label for="temperature-slider">Temperature</label>
+                                <div class="temperature-control">
+                                    <input type="range" id="temperature-slider" class="temperature-slider" min="0" max="2" step="0.1" value="0.7">
+                                    <div class="temperature-value" id="temperature-value">0.7</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="studio-main">
+                        <div class="studio-input">
+                            <h3>Input</h3>
+                            <div class="studio-prompt-container">
+                                <textarea id="studio-prompt" class="studio-prompt" placeholder="Describe what you want Gemini to generate or help with..."></textarea>
+                            </div>
+                            
+                            <div class="file-upload-container">
+                                <input type="file" id="file-upload" hidden>
+                                <button class="file-upload-btn" onclick="document.getElementById('file-upload').click()">
+                                    <i class="fas fa-upload"></i>
+                                    Upload File
+                                </button>
+                                <span id="file-name" class="file-name"></span>
+                            </div>
+                            
+                            <button id="generate-btn" class="generate-btn">
+                                <span class="btn-text">
+                                    <i class="fas fa-bolt"></i>
+                                    Generate
+                                </span>
+                                <div class="loading-spinner"></div>
+                            </button>
+                        </div>
+                        
+                        <div class="studio-output">
+                            <div class="studio-output-header">
+                                <h3>Output</h3>
+                                <div class="studio-output-actions">
+                                    <button id="copy-output-btn" class="output-action-btn" title="Copy to clipboard">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                    <button id="download-output-btn" class="output-action-btn" title="Download output">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div id="studio-output" class="studio-output-content">
+                                <div class="output-placeholder">
+                                    <i class="fas fa-magic"></i>
+                                    <p>Your Gemini-generated content will appear here</p>
+                                    <p class="output-hint">Use the input field above to describe what you want to create</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -173,12 +244,46 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Bimba AI. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Bimba AI Studio</h3>
+                    <p>Powered by Gemini</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#ai-studio">AI Studio</a></li>
+                            <li><a href="#">Pricing</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">API</a></li>
+                            <li><a href="#">Community</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bimba AI Studio. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
             </div>
         </div>
     </footer>
